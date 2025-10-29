@@ -2,9 +2,6 @@
 
 **Author:** [Tarek Masryo](https://www.kaggle.com/tarekmasryo)
 
-**License:**  
-• Dataset `cancer-risk-factors.csv` — **CC BY 4.0**  
-• Code and scripts — **MIT License**
 
 ---
 
@@ -66,4 +63,5 @@ pip install -r requirements.txt
 
 # Open quick example
 jupyter notebook examples/quick_analysis.ipynb
+
 
