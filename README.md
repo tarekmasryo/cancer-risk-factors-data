@@ -1,6 +1,6 @@
 # 🧬 Cancer Risk Factors — Clean Open Dataset
 
-**Author:** [Tarek Masryo](https://www.kaggle.com/tarekmasryo)
+**Author:** [Tarek Masryo](https://github.com/tarekmasryo) · [Kaggle](https://www.kaggle.com/datasets/tarekmasryo/global-ev-charging-stations)  
 
 
 ---
@@ -63,5 +63,6 @@ pip install -r requirements.txt
 
 # Open quick example
 jupyter notebook examples/quick_analysis.ipynb
+
 
 
