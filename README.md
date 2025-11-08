@@ -54,14 +54,15 @@ It is ideal for:
 
 ```bash
 # Download dataset
-git clone https://github.com/TarekMasryo/cancer-risk-factors-dataset.git
-cd cancer-risk-factors-dataset
+git clone https://github.com/TarekMasryo/cancer-risk-factors-data.git
+cd cancer-risk-factors-data
 
 # Install dependencies
 pip install -r requirements.txt
 
 # Open quick example
 jupyter notebook examples/quick_analysis.ipynb
+
 
 
 
