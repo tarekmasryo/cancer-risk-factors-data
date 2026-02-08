@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it."
+title: "Cancer Risk Factors Data"
+type: dataset
+version: 1.0.1
+date-released: 2026-02-08
+authors:
+  - family-names: "Masryo"
+    given-names: "Tarek"
+repository-code: "https://github.com/tarekmasryo/cancer-risk-factors-data"
+url: "https://www.kaggle.com/datasets/tarekmasryo/cancer-risk-factors-dataset"
+license: "CC-BY-4.0"
+keywords:
+  - cancer
+  - healthcare
+  - tabular
+  - risk-factors
+  - classification

@@ -1,29 +1,38 @@
 # 🧬 Cancer Risk Factors — Clean Open Dataset
 
-**Author:** [Tarek Masryo](https://github.com/tarekmasryo) · [Kaggle](https://www.kaggle.com/datasets/tarekmasryo/cancer-risk-factors-dataset) 
+**Author:** [Tarek Masryo](https://github.com/tarekmasryo) · [Kaggle](https://www.kaggle.com/datasets/tarekmasryo/cancer-risk-factors-dataset)
 
 ---
 
 ## 📘 Overview
 
 **Dataset summary:**  
-**Rows:** 2,000 | **Columns:** 21 | **Missing Values:** 0  
+**Rows:** 2,000 | **Columns:** 21 | **Missing values:** 0 | **Duplicate rows:** 0
 
-This dataset provides a **clean and well-structured view** of major **cancer risk factors** at the patient level.  
-Each record represents an individual described through **lifestyle**, **environmental**, and **genetic** indicators associated with cancer development.
+Patient-level tabular dataset covering major **cancer risk factors** across:
 
+- **Lifestyle** (smoking, alcohol use, diet, physical activity)
+- **Environment** (air pollution, occupational hazards)
+- **Medical / genetic indicators** (family history, BRCA mutation, H. pylori)
 
-It is ideal for:
-- Educational use in **data science, EDA, and ML pipelines**  
-- Testing **classification algorithms** (e.g., predict `Cancer_Type` or `Risk_Level`)  
-- Demonstrating **data cleaning, feature importance, and leakage detection**
+Targets you can model:
+- `Cancer_Type` (multiclass)
+- `Risk_Level` (Low/Medium/High) — **derived** (see leakage note)
 
 ---
 
-## 🧩 Schema Summary
+## 📦 What’s inside
+
+- `data/cancer-risk-factors.csv` — primary table (2,000 × 21)
+- `docs/data_dictionary.md` — column definitions
+- `examples/quick_analysis.ipynb` — quick EDA + baseline starter
+
+---
+
+## 🧩 Schema summary
 
 | Column | Description | Type | Example |
-|--------|--------------|------|----------|
+|--------|-------------|------|---------|
 | `Patient_ID` | Unique patient identifier | string | LU0001 |
 | `Cancer_Type` | Cancer category (target) | categorical | Lung |
 | `Age` | Age in years | int | 61 |
@@ -41,29 +50,50 @@ It is ideal for:
 
 ---
 
-## 🧪 Data Insights
+## 🧪 Notes (leakage)
 
-- No missing or duplicate values  
-- Balanced representation across five cancer types: Breast, Lung, Colon, Skin, and Prostate  
-- Variables scaled on a **0–10 risk intensity** system  
-- `Overall_Risk_Score` and `Risk_Level` are **derived features** — exclude from training if predicting risk  
+`Overall_Risk_Score` and `Risk_Level` are **derived features**.  
+If you're training a model to predict risk, exclude derived columns from the feature set.
 
 ---
 
-## 💻 Quick Start
+## 💻 Quick start
 
 ```bash
-# Download dataset
-git clone https://github.com/TarekMasryo/cancer-risk-factors-data.git
+# Download
+git clone https://github.com/tarekmasryo/cancer-risk-factors-data.git
 cd cancer-risk-factors-data
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Open quick example
+# Open example notebook
 jupyter notebook examples/quick_analysis.ipynb
+```
 
+---
 
+## ✅ Data quality checks
 
+```bash
+python scripts/validate_dataset.py
+python scripts/make_checksums.py --check
+```
 
+To regenerate checksums after a legitimate file update:
 
+```bash
+python scripts/make_checksums.py
+```
+
+---
+
+## 🪪 License
+
+CC BY 4.0 — see `LICENSE`.
+
+---
+
+## 🧾 Citation
+
+See `CITATION.cff`.
